@@ -83,23 +83,26 @@ img {
   justify-content: space-between;
 }
 
-.navigation {
-  display: flex;
-  align-items: center;
-}
 
-.nav-list {
-  display: flex;
-  align-items: center;
-}
-
+.navigation,
+.nav-list,
 .header-mail-tel {
   display: flex;
   align-items: center;
 }
 
-.logo {
-  margin-right: 92px;
+.logo {  
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;    
+}
+
+.header_logo {
+margin-right: 92px;
+color: #000000;
 }
 
 .nav-list-item:not(:last-child) {
@@ -113,16 +116,7 @@ img {
 .web-logo {
   color: #2196f3;
 }
-.logo {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
 
-  color: #000000;
-}
 .nav-list-link {
   font-family: var(--primary-font-family);
   font-style: normal;
@@ -168,10 +162,6 @@ img {
 
   color: var(--secondary-text-color);
 }
-.mail-devstudio:hover,
-.mail-devstudio:focus {
-  color: var(--hover-color);
-}
 
 .contact-number {
   font-family: var(--primary-font-family);
@@ -183,6 +173,9 @@ img {
 
   color: var(--secondary-text-color);
 }
+
+.mail-devstudio:hover,
+.mail-devstudio:focus,
 .contact-number:hover,
 .contact-number:focus {
   color: var(--hover-color);
@@ -380,6 +373,8 @@ img {
   left: 12px;
 }
 
+.modal-close:hover,
+.modal-close:focus,
 .input-modal:focus + .input-icon {
   fill: var(--hover-color);
 }
@@ -400,7 +395,8 @@ border-color: var(--hover-color);
 }
 
 .form-filed-argeement {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   font-family: var(--primary-font-family);
   Font-style: normal;
   Font-size: 14px;
@@ -691,8 +687,7 @@ border-color: var(--hover-color);
   border-color: var(--hover-color);
 }
 
-.modal-close:hover,
-.modal-close:focus,
+
 .client-list-link:hover .client-icon,
 .client-list-link:focus .client-icon {
   fill: var(--hover-color);
@@ -712,16 +707,9 @@ border-color: var(--hover-color);
   margin-bottom: 9px;
 }
 
-.footer-logo {
+.footer_logo {
   display: inline-block;
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
   margin-bottom: 20px;
-
   color: var(--primary-text-color-dark-theme);
 }
 .footer-address {
