@@ -1,58 +1,29 @@
 .features-section {
-
-    padding: 60px 0px;  
-
- @media screen and (min-width: 1200px) {
-       padding: 94px 0px;
-            }
-}
-
-.features-item {
-    max-width: 450px;
-    margin-bottom: 30px;
-    
-    @media screen and (min-width: 768px) {
-        width: 354px;
-        margin-left: 30px;
-    }
-    
-    @media screen and (min-width: 1200px) {
-        width: 270px;
-    
-    }
+@extend %section;
 }
 
 .features-wrapper-item {
-    @include centeredFlex;    
+    @include centeredFlex;
+    width: 270px;
     height: 120px;
     margin-bottom: 30px;
     background-color: #f5f4fa;
     border-radius: 4px;
-
-   
-    
-    }
+}
 
 .features-list {
     @extend %list-style-none;
-    margin-bottom: -30px;
-    
+    display: flex;
+    margin-left: -30px;
+    margin-top: -30px;
+}
 
-        @media screen and (min-width: 768px) {
-            margin-left: -30px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-
-        }
-
-        @media screen and (min-width: 1199px) {}
-
-    }
-
+.features-item {
+    margin-left: 30px;
+    margin-top: 30px;
+}
 
 .features-title {
-    text-align: center;
     font-family: $primary-font-family;
     font-style: normal;
     font-weight: bold;
@@ -63,14 +34,10 @@
     margin-bottom: 10px;
 
     color: $primary-text-color;
-
-    @media screen and (min-width: 768px) {
-   text-align: left;
-       
-    }
 }
 
-.features-text {       
+.features-text {
+    width: 270px;
     font-family: $primary-font-family;
     font-style: normal;
     font-weight: normal;
@@ -81,5 +48,3 @@
 
     color: $secondary-text-color;
 }
-
-    

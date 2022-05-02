@@ -1,11 +1,5 @@
 .section-btn {
-@extend %section;
-        @media screen and (max-width:1199px) {
-            padding-top: 60px;
-            padding-bottom: 60px;
-            
-        }
-    
+    @extend %section;
 }
 
 .title-work {
@@ -32,50 +26,26 @@
 
 .list-btn {
     @extend %list-style-none;
-    display: flex;
-        flex-wrap: wrap;
+    @include centeredFlex;
     margin-bottom: 50px;
-
-    @media screen and (max-width:767px) {
-        margin-top: -15px;
-    }
-
-    @media screen and (min-width:768px) {
-        align-items: center;
-        justify-content: center;
-    }
-
 }
 
 .list-portfolio {
     @extend %list-style-none;
-    margin-bottom: -30px;
-    
-    @media screen and (min-width:768px) {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: -30px;
-    }
-  }
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
 
-
-.item-portfolio {   
-    flex-basis: calc((100% - 60px) / 2);
-    margin-bottom: 30px;
-    @media screen and (min-width:768px) {
-        display: flex;
-        
-        margin-left: 30px;
-    }
-    @media screen and (min-width:1200px) {
-        flex-basis: calc((100% - 90px) / 3);
-    }
+.item-portfolio {
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 .item-portfolio-link {
     @extend %link-decoration-none;
     display: inline-block;
-    width: 100%;
 }
 
 .item-portfolio-link:hover {
@@ -83,14 +53,6 @@
     border-color: #eeeeee;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.li-btn {
-
-    @media screen and (max-width:767px) {
-        margin-top: 15px;
-    }
-}
-
-
 
 .li-btn:not(:last-child) {
     margin-right: 8px;
@@ -155,5 +117,3 @@
     padding: 20px 24px;
     border: 1px solid #eeeeee;
 }
-
-

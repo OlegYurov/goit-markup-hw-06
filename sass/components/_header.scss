@@ -1,146 +1,48 @@
 .header {
-    position: relative;
-    padding-top: 21px;
-    padding-bottom: 21px;
+    padding-top: 24px;
+    padding-bottom: 25px;
     border-bottom: 1px solid #ececec;
-
-    @media screen and (min-width:1200px) {
-        padding-top: 24px;
-        padding-bottom: 25px;
-    }
-  
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 .navigation {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-             
-                     
+    @include centeredFlex;
 }
 
 .header-mail-tel,
 .nav-list {
     @extend %list-style-none;
-    }
-
- .nav-list {
-    @media screen and (min-width:768px) {
-        @include centeredFlex;
-}
+    @include centeredFlex;
 }
 
-.header-mail-tel {
-        display: block;
-
-@media screen  and (min-width:1200px) {
-        @include centeredFlex;
-            }
-
-}
 
 .nav-list-item:not(:last-child) {
-@media screen and (max-width:767px) {
-    margin-bottom: 32px;
-}
-
-    @media screen and (min-width:768px) {
-margin-right: 50px;
-    }
-   
+    margin-right: 50px;
 }
 
 
 .nav-list-link {
     @extend %link-decoration-none;
     font-family: $primary-font-family;
-    font-size: 24px;
     font-style: normal;
     font-weight: 500;
+    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    
+
     color: $primary-text-color;
-
-    @media screen and (min-width:768px) {
-        font-size: 14px;
-
-    }
-
 }
-
-.menu-button {
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background-color: transparent;
-
-    @media screen and (min-width:768px) {
-        display: none;
-    }
-}
-
-.menu-button__icons:hover,
-.menu-button__icons:focus {
-    fill: $hover-color;
-}
-
-.menu-button.is-open .icon-cross {
-    display: block;
-}
-
-.menu-button.is-open .icon-menu,
-.menu-button .icon-cross {
-display: none;
-}
-
-.menu-container {    
-     
-      @media screen and (max-width:767px) {
-        display: none;
-        text-align: center;
-        position: absolute;
-        top: 100%;
-        left: 0;
-                width: 100%;
-        
-        padding: 48px 40px;    
-        background-color: #ffffff;
-        z-index: 2;
-
-        &.is-open {
-            display: block;
-        }
-    }
-
-    @media screen and (min-width:768px) {
-        width: 1200px;
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-    }
-
-}
-
-.menu-container_nav {
-    @media screen and (max-width:767px) {
-margin-bottom: 60px;
-    }
-    
-    
-}
-
-
 
 .current {
-    padding-bottom: 10px;
+    padding-bottom: 33px;
     position: relative;
     color: $hover-color;
-
-    @media screen and (min-width:768px) {
-padding-bottom: 33px;
-    }
 }
 
 .current::after {
@@ -161,42 +63,30 @@ padding-bottom: 33px;
     color: $hover-color;
 }
 
-.header-mail {
-@media screen and (max-width:767px) {
-margin-bottom: 32px;
-}
-@media screen and (min-width:768px) and (max-width:1200px) {
-    margin-bottom: 10px;
-}
-
-}
-
 .mail-devstudio {
-    @media screen and (min-width:1200px) {
-        margin-right: 50px;
-    }
+    @extend %link-decoration-none;
+    font-family: $primary-font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14px;
+    letter-spacing: 0.02em;
+    margin-right: 50px;
+
+    color: $secondary-text-color;
 }
 
-.contact-number,
-.mail-devstudio {
-   
- @extend %link-decoration-none;
-font-family: $primary-font-family;
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 1.14px;
-letter-spacing: 0.02em;
+.contact-number {
+    @extend %link-decoration-none;
+    font-family: $primary-font-family;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 
-
-color: $secondary-text-color;
-    
-    @media screen and (min-width:768px) {
-        font-size: 14px;
-    }
-    
+    color: $secondary-text-color;
 }
-
 
 .mail-devstudio:hover,
 .mail-devstudio:focus,
@@ -219,4 +109,4 @@ color: $secondary-text-color;
 .mail-devstudio:hover .header-mail-icon,
 .mail-devstudio:focus .header-mail-icon {
     fill: $hover-color;
-} 
+}
