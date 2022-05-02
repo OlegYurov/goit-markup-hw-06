@@ -7,6 +7,8 @@
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 93px 15px;
+    overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -14,24 +16,42 @@
     pointer-events: none;
 }
 
+@media screen and (min-width: 768px) {
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.9);
 }
+}
+
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    min-width: 528px;
-    min-height: 581px;
+    position: relative;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 1);
-    transform: translate(-50%, -50%) scale(1);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    background-color: rgba(255, 255, 255, 1);    
     border-radius: 4px;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14);
+
+    @media screen and (min-width: 480px) {
+        width: 450px;
+        height: 609px;
+    }
+    @media screen and (max-width: 768px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
+    }
+
+    @media screen and (min-width: 1200px) {
+        min-width: 528px;
+        min-height: 581px;
+    }
 }
 
 .modal-close {
@@ -46,6 +66,8 @@
     border-radius: 50%;
     cursor: pointer;
     background-color: #ffffff;
+
+ 
 }
 
 
@@ -137,11 +159,16 @@
     @include centeredFlex;
     font-family: $primary-font-family;
     Font-style: normal;
-    Font-size: 14px;
-    Line-height: 24px;
+    Font-size: 12px;
+    Line-height: 1.71;
     Letter-spacing: 0.03em;
     color: $secondary-text-color;
     margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+        Font-size: 14px;
+        
+    }
 
 }
 
